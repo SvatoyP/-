@@ -1,0 +1,77 @@
+/* Подключение шрифтов */
+@font-face {
+    font-family: 'JetBrainsMono-Regular';
+    src: url('JetBrainsMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JetBrainsMono-Bold';
+    src: url('JetBrainsMono-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Общий стиль */
+html * {
+    font-size: 1.1em;
+    color: #d3d3d3; /* Серый ближе к белому */
+    font-family: 'JetBrainsMono-Regular', sans-serif;
+}
+
+h1 {
+    font-size: 46px;
+    font-family: 'JetBrainsMono-Bold', sans-serif;
+    color: #f0f0f0; /* Более светлый серый */
+}
+
+.container {
+    margin-top: 33.33vh;
+}
+
+/* Стили для navbar */
+.navbar {
+    background: linear-gradient(to right, #000000, #505050) !important; 
+}
+
+.navbar .nav-link {
+    color: #d3d3d3 !important; /* Серый текст */
+}
+
+/* Добавление вертикальных полос между nav-item */
+.navbar-nav .nav-item {
+    position: relative;
+    padding: 0 15px; /* Отступы слева и справа */
+}
+
+.navbar-nav .nav-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 1px;
+    background-color: #d3d3d3; /* Серый цвет полосы */
+}
+
+/* Эффект затемнения при наведении */
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Светлое затемнение */
+    border-radius: 5px; /* Немного закругления для красоты */
+}
+
+/* Стили для кнопок */
+button {
+    background-color: #000; /* Черный фон */
+    color: #d3d3d3; /* Серый текст */
+    border: 1px solid #505050; /* Серый контур */
+    padding: 10px 20px;
+    border-radius: 5px; /* Закругленные углы */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #505050; /* Темно-серый при наведении */
+    color: #fff; /* Белый текст при наведении */
+}
